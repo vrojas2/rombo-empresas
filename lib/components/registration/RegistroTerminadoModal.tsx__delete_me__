@@ -1,0 +1,64 @@
+import {
+  CircularProgress,
+  Dialog,
+  DialogContent,
+  DialogContentText,
+  Theme,
+} from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
+import { ReactElement } from 'react'
+import { useTranslation } from 'react-i18next'
+import { RegistrationStates, useRegistrationForm } from './RegistrationContext'
+
+const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    opacity: 0.95,
+  },
+  title: {
+    color: theme.palette.info.main,
+    fontWeight: theme.typography.fontWeightBold,
+  },
+  text: {
+    fontWeight: theme.typography.fontWeightBold,
+  },
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginBottom: theme.spacing(4),
+    marginTop: theme.spacing(3),
+  },
+  progress: {
+    marginBottom: theme.spacing(4),
+  },
+}))
+
+const RegistroTerminadoModal = (): ReactElement => {
+  const { t } = useTranslation()
+  const { currentStep } = useRegistrationForm()
+  const classes = useStyles()
+  return (
+    <Dialog open={currentStep === RegistrationStates.REGISTERED} fullWidth className={classes.root}>
+      <DialogContent className={classes.content}>
+        <DialogContentText variant="h5" className={classes.title}>
+          {t('¡Bienvenido a Rombo!')}
+        </DialogContentText>
+        <DialogContentText variant="body1" className={classes.text}>
+          {t('Tu registro se ha completado por lo que ya puedes ingresar a la plataforma.')}
+        </DialogContentText>
+        {/*<CircularProgress className={classes.progress} thickness={6} size={80} color="primary" />
+        <Typography color="primary" variant="h5">
+          {t('Creando registro...')}
+        </Typography>
+        */}
+        <DialogContentText variant="body2" className={classes.text}>
+          {t(
+            'Recuerda que durante N días, tendrás acceso sin costo a todos los beneficios del plan.',
+          )}
+        </DialogContentText>
+      </DialogContent>
+    </Dialog>
+  )
+}
+
+export default RegistroTerminadoModal

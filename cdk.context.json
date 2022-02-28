@@ -1,0 +1,14 @@
+{
+  "hosted-zone:account=711179720646:domainName=dev.rombo.microsipnube.com:region=us-west-2": {
+    "Id": "/hostedzone/Z0876474YV9ARQN74N4S",
+    "Name": "dev.rombo.microsipnube.com."
+  },
+  "hosted-zone:account=711179720646:domainName=dev.rombo.microsipnube.com:region=us-east-1": {
+    "Id": "/hostedzone/Z0876474YV9ARQN74N4S",
+    "Name": "dev.rombo.microsipnube.com."
+  },
+  "hosted-zone:account=711179720646:domainName=uat.rombo.microsipnube.com:region=us-east-1": {
+    "Id": "/hostedzone/Z0386712K3V8N1VUSI81",
+    "Name": "uat.rombo.microsipnube.com."
+  }
+}

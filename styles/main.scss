@@ -1,0 +1,70 @@
+@import 'variables';
+
+.home-card {
+    width: 90%;
+    margin-bottom: 10px;
+    .home-h1,
+    .home-h3 {
+        color: $dark-gray1;
+    }
+}
+
+.reportes-card {
+    width: 80%;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.icono-home {
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
+.icono-reporte {
+    top: 10px;
+    position: relative;
+}
+.icono-ir {
+    left: 350px;
+    color: $blue-arrow;
+}
+
+.button-grid {
+    text-align: center;
+    .selected {
+        text-decoration: underline;
+    }
+}
+.container-center {
+    text-align: -webkit-center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.blue-name {
+    color: rgb(0, 136, 255);
+}
+
+.MuiGrid-container{
+    .grid-80 {
+        width: 80%;
+    }
+    .grid-99 {
+        width: 99%;
+    }
+    .grid-95 {
+        width: 95%;
+        height: 360px;
+    }
+    .grid-90 {
+        width: 98%;
+    }
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+@import 'auth';
