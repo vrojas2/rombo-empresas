@@ -10,6 +10,7 @@ type MenuLinkProps = {
 }
 
 export const MenuLink = ({ label, Icon, href, iconSize }: MenuLinkProps): JSX.Element => {
+
   return (
     <Link href={href}>
       <ListItem button>

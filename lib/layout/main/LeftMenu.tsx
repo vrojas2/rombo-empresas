@@ -21,7 +21,7 @@ export default function LeftMenu(): JSX.Element {
         Rombo
       </div>
       <Divider />
-      <List>
+      <List className={classes.backMenuLeft}>
         <MenuLink label={t('inicio')} Icon={IoHomeOutline} href="/" iconSize="2em" />
         <MenuLink label={t('facturas')} Icon={IoReceiptOutline} href="/facturas" iconSize="2em" />
         <MenuLink label={t('clientes')} Icon={IoPeopleOutline} href="/clientes" iconSize="2em" />
