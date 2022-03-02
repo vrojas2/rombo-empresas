@@ -9,34 +9,43 @@ const useStyle = makeStyles((theme: Theme) =>
     container: {
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
-      flexFlow: 'column wrap',
-      height: '100%',
+      
+      alignItems:'center',
+      flexFlow: 'row',
+      height: '80vh',
     },
-    grid: {
-      padding: '0 1em',
-    },
+   
     card: {
-      width: '100%',
+      display:'flex',
+      justifyContent:'center',
+      alignItems:'center',
+      
+      width: '40%',
       margin: '1% 1em',
-      padding: '2em 0',
-      verticalAlign: 'center',
+      padding: '1em 0',
       cursor: 'pointer',
+      height: '400px',
+      color:'white',   
+      borderRadius: '50px',
+      background: 'linear-gradient(to bottom right, #21D4FD 0%, #B721FF 100%);',
+      boxShadow: '1px 1px 6px #B721FF, -1px 0 6px 0px #21D4FD;',
     },
-    arrow: {
-      textAlign: 'right',
-      color: theme.palette.primary.main,
-    },
+   
     text: {
-      fontSize: '1.5em',
-      paddingLeft: '0.5em',
+      textAlign:'center',
     },
     title: {
       display: 'flex',
-      justifyContent: 'flex-start',
-      alignITems: 'center',
-      flexFlow: 'row wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: '2em',
+      flexFlow: 'column',
     },
+    cardContainer:{
+      display:'flex',
+      backgroundColor:'red'
+    },
+    
   }),
 )
 
@@ -54,19 +63,19 @@ const CardSection = ({ title, url, icon }: CardProps) => {
     return null
   }
   return (
-    <Link href={url}>
+    <Link href={url} >
       <Card className={classes.card}>
         <Grid
           container
-          direction="row"
+          direction="column"
           alignItems="center"
           justifyContent="center"
-          spacing={1}
+          spacing={0}
           className={classes.grid}
         >
           <Grid item xs={10}>
-            <Grid container direction="row" alignItems="flex-start">
-              <Grid item xs={10}>
+            <Grid container direction="row" alignItems="center">
+              <Grid item xs={0} className={classes.grid}>
                 <div className={classes.title}>
                   {icon}
                   <Text text={title} className={classes.text} />
@@ -74,9 +83,7 @@ const CardSection = ({ title, url, icon }: CardProps) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={2} className={classes.arrow}>
-            <IoChevronForwardOutline size={ICON_SIZE} color="primary" />
-          </Grid>
+          
         </Grid>
       </Card>
     </Link>
@@ -87,12 +94,12 @@ export const ReportesPage = (): JSX.Element => {
   return (
     <Page title="Reportes">
       <div className={classes.container}>
-        <CardSection
+        <CardSection 
           title="Ventas por artículo"
           url="/reportes/ventas-por-articulo"
           icon={<IoPricetagsOutline size={ICON_SIZE} />}
         />
-        <CardSection
+        <CardSection 
           title="Ventas por cliente"
           url="/reportes/ventas-por-cliente"
           icon={<IoPersonOutline size={ICON_SIZE} />}

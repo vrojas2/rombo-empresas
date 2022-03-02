@@ -10,7 +10,13 @@ type ActionLinkProps = {
 }
 const useStyles = makeStyles({
   buton: {
-    height: '200px',
+    height: '50px',
+    minWidth:'160px',
+    margin:'20px 0',
+    maxWidth:'200px',
+    borderRadius: '50px',
+    background: 'linear-gradient(to bottom right, #21D4FD 0%, #B721FF 100%);',
+    boxShadow: '1px 1px 3px #B721FF, -1px 0 3px 0px #21D4FD;',
   },
 });
 export default function ActionLink({

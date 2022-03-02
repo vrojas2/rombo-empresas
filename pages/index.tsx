@@ -55,7 +55,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     color:'white',
     height:'300px',
     borderRadius: '50px',
-    background: 'linear-gradient(to bottom right, #8e2de2, #4a00e0);'
+    background: 'linear-gradient(to bottom right, #21D4FD 0%, #B721FF 100%);',
+    boxShadow: '3px 3px 6px #B721FF, -2px 0 6px 0px #21D4FD;',
+
+
 
   },
   indicadorLabel: {
