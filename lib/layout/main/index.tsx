@@ -61,6 +61,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   backMenuLeft: {
-    backgroundColor: `red`
+    background: ` linear-gradient(#0000c4, #1cb5e0);   `,
+    height: `100%`,
+    display: `flex`,
+    flexDirection: `column`,
+    justifyContent: `space-evenly`
   }
 }))

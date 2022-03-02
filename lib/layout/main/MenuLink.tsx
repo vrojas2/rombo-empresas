@@ -1,6 +1,8 @@
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
 import { OverridableComponent } from '@material-ui/core/OverridableComponent'
 import Link from 'next/link'
+import { useStyles } from '.'
+
 
 type MenuLinkProps = {
   label: string
@@ -10,9 +12,10 @@ type MenuLinkProps = {
 }
 
 export const MenuLink = ({ label, Icon, href, iconSize }: MenuLinkProps): JSX.Element => {
+  const classes = useStyles()
 
   return (
-    <Link href={href}>
+    <Link href={href} className={classes.backMenuLeft}>
       <ListItem button>
         <ListItemIcon>
           <Icon size={iconSize || '3em'} />

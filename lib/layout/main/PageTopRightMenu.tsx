@@ -119,7 +119,8 @@ export default function PageTopRightMenu(): ReactElement {
           style={{ textTransform: 'none' }}
           endIcon={<IoEllipsisVertical size={ICON_SIZE} />}
         >
-          <Hidden xsDown>{user ? user : <CircularProgress />}</Hidden>
+           {/* <IoPersonOutline size={ICON_SIZE} /> */}
+          <Hidden xsDown>{user ? <IoPersonOutline size={ICON_SIZE} /> : <CircularProgress />}</Hidden>
         </Button>
         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
           {({ TransitionProps, placement }) => (
