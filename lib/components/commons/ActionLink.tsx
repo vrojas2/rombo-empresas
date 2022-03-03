@@ -15,8 +15,8 @@ const useStyles = makeStyles({
     margin:'20px 0',
     maxWidth:'200px',
     borderRadius: '50px',
-    background: 'linear-gradient(to bottom right, #21D4FD 0%, #B721FF 100%);',
-    boxShadow: '1px 1px 3px #B721FF, -1px 0 3px 0px #21D4FD;',
+    boxShadow: ' 1px 1px 5px #FFB23C;,1px 1px 5px #FFC443;',
+      background: 'linear-gradient(45deg, #FFB23C 0%, #FFC443 67%);'
   },
 });
 export default function ActionLink({

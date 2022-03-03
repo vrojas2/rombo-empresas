@@ -16,32 +16,35 @@ const useStyle = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      flexFlow: 'column wrap',
+      flexFlow: 'row wrap',
       height: '100%',
     },
-    grid: {
-      padding: '0 1em',
-    },
+
     card: {
-      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '33%',
+      border:'none',
       margin: '1% 1em',
-      padding: '2em 0',
-      verticalAlign: 'center',
+      padding: '1em 0',
       cursor: 'pointer',
-    },
-    arrow: {
-      textAlign: 'right',
-      color: theme.palette.primary.main,
+      height: '290px',
+      color: '#343434',
+      borderRadius: '50px',
+      boxShadow: ' 1px 1px 10px #FFB23C;,1px 1px 10px #FFC443;',
+      background: 'linear-gradient(45deg, #FFB23C 0%, #FFC443 67%);'
     },
     text: {
-      fontSize: '1.5em',
-      paddingLeft: '0.5em',
+      textAlign: 'center',
+      
     },
     title: {
       display: 'flex',
-      justifyContent: 'flex-start',
-      alignITems: 'center',
-      flexFlow: 'row wrap',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexFlow: 'column',
+      fontSize:'1.7em',
     },
   }),
 )
@@ -62,29 +65,16 @@ const CardSection = ({ title, url, icon }: CardProps) => {
   return (
     <Link href={url}>
       <Paper className={classes.card}>
-        <Grid
-          container
-          direction="row"
-          alignItems="center"
-          justifyContent="center"
-          spacing={1}
-          className={classes.grid}
-        >
-          <Grid item xs={10}>
-            <Grid container direction="row" alignItems="flex-start">
-              {/* <Grid item xs={1}>
-                
-              </Grid> */}
-              <Grid item xs={10}>
+        <Grid container direction="row" alignItems="center" justifyContent="center" spacing={1}>
+          <Grid item xs={0}>
+            <Grid container direction="row" alignItems="center">
+              <Grid item xs={0}>
                 <div className={classes.title}>
                   {icon}
                   <Text text={title} className={classes.text} />
                 </div>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid item xs={2} className={classes.arrow}>
-            <IoChevronForwardOutline size={ICON_SIZE} color="primary" />
           </Grid>
         </Grid>
       </Paper>

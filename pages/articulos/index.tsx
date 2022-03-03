@@ -67,13 +67,21 @@ const useStyle = makeStyles((theme: Theme) =>
     topControl: {
       [theme.breakpoints.up('md')]: {
         marginTop: theme.spacing(-2),
+        textAlign: 'left',
+      },
+    },
+    topControlAdd: {
+      [theme.breakpoints.up('md')]: {
+        marginTop: theme.spacing(-2),
         textAlign: 'right',
       },
     },
     searchBarInput: {
       borderRadius: 50,
-      backgroundColor: theme.palette.background.paper,
-      boxShadow: theme.shadows[1],
+      height:'50px',
+      color: 'white',
+      background: '#232323',
+      boxShadow: ' 1px 1px 5px #232323;,1px 1px 5px #464646;',
       marginTop: theme.spacing(1.8),
       fontSize: 'inherit',
       [theme.breakpoints.down('xs')]: {
@@ -82,6 +90,8 @@ const useStyle = makeStyles((theme: Theme) =>
     },
     searchBarIconButton: {
       padding: 10,
+      color: 'white',
+      
     },
     speedDial: {
       position: 'absolute',
@@ -89,7 +99,12 @@ const useStyle = makeStyles((theme: Theme) =>
       right: theme.spacing(2),
     },
     importButton: {
-      width: '100%',
+      height: '50px',
+      minWidth: '160px',
+      maxWidth: '200px',
+      color: 'white',
+      background: 'linear-gradient(45deg, #232323 0%, #464646 100%);',
+      boxShadow: ' 1px 1px 5px #232323;,1px 1px 5px #464646;',
     },
     divider: {
       height: '1.5em',
@@ -326,7 +341,6 @@ export default function ArticulosPage(): JSX.Element {
             <Hidden xsDown>
               <Grid xs={6} item className={classes.topControl}>
                 <Button
-                  color="secondary"
                   startIcon={<IoCloudUploadOutline size={ICON_SIZE} />}
                   className={classes.importButton}
                   onClick={() => setImportarArticulos(true)}
@@ -335,7 +349,7 @@ export default function ArticulosPage(): JSX.Element {
                 </Button>
               </Grid>
             </Hidden>
-            <Grid xs={2} sm={6} item className={classes.topControl}>
+            <Grid xs={2} sm={6} item className={classes.topControlAdd}>
               <ActionLink
                 href="/articulos/nuevo"
                 icon={<IoPersonAddOutline size={ICON_SIZE} />}

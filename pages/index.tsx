@@ -52,14 +52,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   indicador: {
     textAlign: 'center',
-    color:'white',
-    height:'300px',
+    color:'#343434',
+    height:'230px',
     borderRadius: '50px',
-    background: 'linear-gradient(to bottom right, #21D4FD 0%, #B721FF 100%);',
-    boxShadow: '3px 3px 6px #B721FF, -2px 0 6px 0px #21D4FD;',
-
-
-
+    boxShadow: ' 1px 1px 10px #FFB23C;,1px 1px 10px #FFC443;',
+    background: 'linear-gradient(45deg, #FFB23C 0%, #FFC443 67%);'
   },
   indicadorLabel: {
     fontSize: theme.typography.h5.fontSize,
@@ -71,11 +68,15 @@ const useStyles = makeStyles((theme: Theme) => ({
   indicadorLabelIcon: {
     marginRight: theme.spacing(2),
     fontSize: theme.typography.h4.fontSize,
+    
   },
   indicadorValue: {
     fontSize: theme.typography.h4.fontSize,
-    color: theme.palette.primary.main,
+    color: 'white',
     height: theme.spacing(8),
+  },
+  indicadorFecha:{
+    borderRadius: '30px',
   },
 }))
 
@@ -192,7 +193,7 @@ export const EmpresaPage = (): JSX.Element => {
 
   return (
     <Page title="Indicadores de mi empresa">
-      <Card>
+      <Card className={classes.indicadorFecha}>
         <div className={classes.loaderWrapper}>{cargando && <LinearProgress />}</div>
         <CardContent>
           <Grid container spacing={1}>
@@ -267,7 +268,7 @@ export const EmpresaPage = (): JSX.Element => {
           <Card className={classes.indicador}>
             <CardContent>
               <div className={classes.indicadorLabel}>
-                <IoReceiptOutline color="brown" className={classes.indicadorLabelIcon} />{' '}
+                <IoReceiptOutline color="black" className={classes.indicadorLabelIcon} />{' '}
                 {t('Número de ventas')}
               </div>
               <div className={classes.indicadorValue}>
@@ -281,7 +282,7 @@ export const EmpresaPage = (): JSX.Element => {
           <Card className={classes.indicador}>
             <CardContent>
               <div className={classes.indicadorLabel}>
-                <IoCashOutline color="green" className={classes.indicadorLabelIcon} />{' '}
+                <IoCashOutline color="black" className={classes.indicadorLabelIcon} />{' '}
                 {t(' Monto total de ventas')}
               </div>
               <div className={classes.indicadorValue}>
@@ -297,7 +298,7 @@ export const EmpresaPage = (): JSX.Element => {
           <Card className={classes.indicador}>
             <CardContent>
               <div className={classes.indicadorLabel}>
-                <IoCalculator color="gray" className={classes.indicadorLabelIcon} />{' '}
+                <IoCalculator color="black" className={classes.indicadorLabelIcon} />{' '}
                 {t(' Monto promedio por venta')}
               </div>
               <div className={classes.indicadorValue}>
@@ -313,7 +314,7 @@ export const EmpresaPage = (): JSX.Element => {
           <Card className={classes.indicador}>
             <CardContent>
               <div className={classes.indicadorLabel}>
-                <IoPeople color="purple" className={classes.indicadorLabelIcon} />
+                <IoPeople color="black" className={classes.indicadorLabelIcon} />
                 {t('Número de clientes nuevos')}
               </div>
               <div className={classes.indicadorValue}>

@@ -101,8 +101,10 @@ const useStyle = makeStyles((theme: Theme) =>
     },
     searchBarInput: {
       borderRadius: 50,
-      backgroundColor: theme.palette.background.paper,
-      boxShadow: theme.shadows[1],
+      height:'50px',
+      color: 'white',
+      background: '#232323',
+      boxShadow: ' 1px 1px 5px #232323;,1px 1px 5px #464646;',
       marginTop: theme.spacing(1.8),
       fontSize: 'inherit',
       [theme.breakpoints.down('xs')]: {
@@ -111,6 +113,8 @@ const useStyle = makeStyles((theme: Theme) =>
     },
     searchBarIconButton: {
       padding: 10,
+      color: 'white',
+      
     },
     speedDial: {
       position: 'absolute',

@@ -9,7 +9,6 @@ const useStyle = makeStyles((theme: Theme) =>
     container: {
       display: 'flex',
       justifyContent: 'center',
-      
       alignItems:'center',
       flexFlow: 'row',
       height: '80vh',
@@ -19,16 +18,15 @@ const useStyle = makeStyles((theme: Theme) =>
       display:'flex',
       justifyContent:'center',
       alignItems:'center',
-      
       width: '40%',
       margin: '1% 1em',
       padding: '1em 0',
       cursor: 'pointer',
       height: '400px',
-      color:'white',   
+      color:'black',   
       borderRadius: '50px',
-      background: 'linear-gradient(to bottom right, #21D4FD 0%, #B721FF 100%);',
-      boxShadow: '1px 1px 6px #B721FF, -1px 0 6px 0px #21D4FD;',
+      boxShadow: ' 1px 1px 15px #FFB23C;,1px 1px 15px #FFC443;',
+      background: 'linear-gradient(45deg, #FFB23C 0%, #FFC443 67%);'
     },
    
     text: {
@@ -41,10 +39,7 @@ const useStyle = makeStyles((theme: Theme) =>
       fontSize: '2em',
       flexFlow: 'column',
     },
-    cardContainer:{
-      display:'flex',
-      backgroundColor:'red'
-    },
+    
     
   }),
 )
@@ -71,11 +66,11 @@ const CardSection = ({ title, url, icon }: CardProps) => {
           alignItems="center"
           justifyContent="center"
           spacing={0}
-          className={classes.grid}
+          
         >
           <Grid item xs={10}>
             <Grid container direction="row" alignItems="center">
-              <Grid item xs={0} className={classes.grid}>
+              <Grid item xs={0} >
                 <div className={classes.title}>
                   {icon}
                   <Text text={title} className={classes.text} />
